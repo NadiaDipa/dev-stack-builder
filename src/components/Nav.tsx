@@ -6,7 +6,7 @@ export const Nav = () => {
       <img src={Logo} alt="logo-img" />
 
       <ul className="flex gap-7 items-center text-xl font-semibold">
-        <li className="text-secondary">
+        <li className="text-[#DB2777]">
           <a href="">Home</a>
         </li>
         <li>
