@@ -7,4 +7,7 @@ export interface TechTypes {
   rating: number;
   difficulty: string;
   badge: string;
+  badgeBg: string;
+  badgeText: string;
+
 }

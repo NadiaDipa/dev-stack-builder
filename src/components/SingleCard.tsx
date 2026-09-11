@@ -1,22 +1,21 @@
 import type { TechTypes } from "../types/TechTypes";
 
 interface SingleProps {
-  technology: TechTypes
+  technology: TechTypes;
 }
 
-export const SingleCard = ({technology}:SingleProps) => {
+export const SingleCard = ({ technology }: SingleProps) => {
   return (
     <section>
       <div className="card bg-base-100 shadow-sm">
         <div className="card-body">
           <div className="flex justify-between">
             <div className="w-16 h-16">
-              <img
-                src={technology.icon}
-                alt=""
-              />
+              <img src={technology.icon} alt="" />
             </div>
-            <span className="badge badge-ls text-[#0EA5E9] bg-[#E0F2FE] rounded-xl font-semibold">
+            <span
+              className={`border border-current/20 badge rounded-full font-semibold h-6.75 text-[13px] px-3 flex items-center ${technology.badgeBg} ${technology.badgeText}`}
+            >
               {technology.badge}
             </span>
           </div>
@@ -37,15 +36,12 @@ export const SingleCard = ({technology}:SingleProps) => {
               {technology.difficulty}
             </span>
             <div className="flex items-center gap-2">
-              <span className="rating rating-xs">
-                <input
-                  type="radio"
-                  name="rating-2"
-                  className="mask mask-star-2 bg-yellow-400"
-                  aria-label="1 star"
-                />
+              <span className="mask mask-star-2 bg-amber-400 w-4 h-4"></span>
+
+              <span className="font-bold text-[#334155]">
+                {technology.rating}
               </span>
-              <span className="font-bold text-[#334155]">{technology.rating}</span>
+              
             </div>
           </div>
 
