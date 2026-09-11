@@ -1,6 +1,16 @@
+import { use } from "react";
 import { TechnologiesAllCard } from "./TechnologiesAllCard";
+import type { TechTypes } from "../types/TechTypes";
 
-export const TechnologiesParent = () => {
+interface TechnologyAllCardProps {
+  technologyPromise: Promise<TechTypes[]>;
+}
+
+export const TechnologiesParent = ({
+  technologyPromise,
+}: TechnologyAllCardProps) => {
+  const technologies = use(technologyPromise);
+  // console.log(technologyUse);
   return (
     <main className="container mx-auto">
       <section className="">
@@ -16,17 +26,13 @@ export const TechnologiesParent = () => {
         </p>
       </section>
 
-
-
       <section>
         <div className="flex min-h-">
-          <div className= " w-3/4 bg-yellow-200 grid grid-cols-3">
-          <TechnologiesAllCard/>
+          <div className=" w-3/4">
+            <TechnologiesAllCard technologies={technologies}/>
           </div>
 
-
-
-          <div className="w-1/4 bg-amber-900 grid grid-cols-1">sidebar</div>
+          <div className="w-1/4 bg-slate-900 grid grid-cols-1">sidebar</div>
         </div>
       </section>
     </main>
