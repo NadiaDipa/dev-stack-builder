@@ -9,7 +9,7 @@ interface TechnologiesProps{
 export const TechnologiesAllCard = ({technologies}:TechnologiesProps) => {
 
   return (
-    <section className="w-full grid grid-cols-3 py-15 gap-10">
+    <section className="w-full grid grid-cols-3 items-stretch py-15 gap-10">
       {
         technologies.map((technology:TechTypes, ind: number)=>{
           return <SingleCard technology={technology} key={ind}/>

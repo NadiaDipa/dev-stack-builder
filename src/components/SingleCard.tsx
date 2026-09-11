@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { TechTypes } from "../types/TechTypes";
 
 interface SingleProps {
@@ -5,16 +6,28 @@ interface SingleProps {
 }
 
 export const SingleCard = ({ technology }: SingleProps) => {
+  const [isSelected, setIsSelected] = useState(false);
+
   return (
     <section>
-      <div className="card bg-base-100 shadow-sm">
+      <div className={`card bg-base-100 shadow-sm h-full
+        ${isSelected === true  
+          ? "border-2 border-[#EC4899]" 
+          : "border border-gray-200"
+        }
+        `}>
         <div className="card-body">
-          <div className="flex justify-between">
+          <div className="flex justify-between items-center">
             <div className="w-16 h-16">
               <img src={technology.icon} alt="" />
             </div>
             <span
-              className={`border border-current/20 badge rounded-full font-semibold h-6.75 text-[13px] px-3 flex items-center ${technology.badgeBg} ${technology.badgeText}`}
+              className={`border border-current/20 badge rounded-full font-semibold h-6.75 text-[13px] px-3 flex items-center 
+              ${
+                isSelected
+                ? "bg-[#FCE7F3] text-[#DB2777]"
+                : `${technology.badgeBg} ${technology.badgeText}`
+              }`}
             >
               {technology.badge}
             </span>
@@ -41,13 +54,22 @@ export const SingleCard = ({ technology }: SingleProps) => {
               <span className="font-bold text-[#334155]">
                 {technology.rating}
               </span>
-              
             </div>
           </div>
 
           <div className="mt-6">
-            <button className="bg-[#0A0F1D] text-[#FFFFFF] rounded-xl btn btn-block h-12">
-              Add to Stack
+            <button
+              onClick={() => setIsSelected(true)}
+              className={`btn btn-block h-12 py-6 rounded-xl text-[16px]
+                ${
+                  isSelected === true
+                  ? "bg-[#fff9fc] text-[#DB2777]  font-semibold"
+                  : "bg-[#0A0F1D] text-white border-2 border-transparent"
+                  }
+                `}
+              disabled={isSelected === true ? true : false}
+            >
+              {isSelected === true ? "Added to Stack" : "Add to Stack"}
             </button>
           </div>
         </div>
