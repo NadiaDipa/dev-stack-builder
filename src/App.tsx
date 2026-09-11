@@ -1,5 +1,6 @@
 import { Banner } from "./components/Banner"
 import { Nav } from "./components/Nav"
+import { TechnologiesParent } from "./components/TechnologiesParent"
 
 function App() {
   
@@ -8,6 +9,7 @@ function App() {
    <>
    <Nav/>
    <Banner/>
+   <TechnologiesParent/>
    
    </>
   )
