@@ -1,6 +1,7 @@
 import { use } from "react";
 import { TechnologiesAllCard } from "./TechnologiesAllCard";
 import type { TechTypes } from "../types/TechTypes";
+import { Sidebar } from "./Sidebar";
 
 interface TechnologyAllCardProps {
   technologyPromise: Promise<TechTypes[]>;
@@ -27,12 +28,14 @@ export const TechnologiesParent = ({
       </section>
 
       <section>
-        <div className="flex min-h-">
+        <div className="flex min-h-fit gap-10 mt-8">
           <div className=" w-3/4">
-            <TechnologiesAllCard technologies={technologies}/>
+            <TechnologiesAllCard technologies={technologies} />
           </div>
 
-          <div className="w-1/4 bg-slate-900 grid grid-cols-1">sidebar</div>
+          <div className="w-1/4 grid grid-cols-1">
+            <Sidebar />
+          </div>
         </div>
       </section>
     </main>
