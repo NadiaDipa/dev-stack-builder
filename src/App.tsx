@@ -4,6 +4,9 @@ import { Nav } from "./components/Nav";
 import { TechnologiesParent } from "./components/TechnologiesParent";
 import type { TechTypes } from "./types/TechTypes";
 import { Toaster } from "react-hot-toast";
+import { Footer } from "./components/Footer";
+
+
 
 
 const technologyFetch = async (): Promise<TechTypes[]> => {
@@ -24,6 +27,7 @@ function App() {
         <TechnologiesParent technologyPromise={technologyPromise} />
       </Suspense>
       <Toaster/>
+      <Footer/>
     </>
   );
 }

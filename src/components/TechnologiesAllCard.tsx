@@ -11,7 +11,6 @@ interface TechnologiesProps{
 
 export const TechnologiesAllCard = ({technologies, handleAddToStack, addedTechnology }:TechnologiesProps) => {
 
-  
 
   return (
     <section className="w-full grid grid-cols-3 items-stretch py-15 gap-10">
