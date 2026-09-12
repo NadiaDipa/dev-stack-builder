@@ -13,15 +13,46 @@ export const TechnologiesParent = ({
   technologyPromise,
 }: TechnologyAllCardProps) => {
   const technologies = use(technologyPromise);
-  // console.log(technologyUse);
+  
 
-  // const [techAdd, setTechAdd] = useState(false);
+  // useState for add to stack
   const [addedTechnology, setAddedTechnology] = useState<TechTypes[]>([])
 
   const handleAddToStack = (tech: TechTypes) => {
   setAddedTechnology([...addedTechnology, tech]);
-  toast.success(`${tech.name} added to your stack!`);
+  toast.success(`${tech.name} added to your stack!`,
+    {
+      style: {
+        border: '2px solid red',
+        padding: '25px 35px',
+        color: '#0A0F1D',
+        backgroundColor: '#FFF5FA',
+        fontWeight: 'bold',
+        borderRadius: '10px',
+        fontSize: '15px'
+      }
+    }
+  );
 };
+
+
+  // remove function for add to stack
+  const handleRemoveTech = (tech: TechTypes) =>{
+    const restTech = addedTechnology.filter((item : TechTypes) => item.id !== tech.id)
+    setAddedTechnology(restTech);
+    toast.error(`${tech.name} Removed From Your Stack!`, {
+      style:{
+        border: '2px solid red',
+        padding: '25px 35px',
+        color: '#FFFFFF',
+        backgroundColor: '#0A0F1D',
+        fontWeight: 'bold',
+        borderRadius: '10px',
+        fontSize: '15px'
+      }
+    });
+  }
+
 
   return (
     <main className="container mx-auto">
@@ -64,6 +95,7 @@ export const TechnologiesParent = ({
                 <div className="card bg-base-100 shadow-sm rounded-3xl">
                   <div className="card-body">
                     <div className="card-actions justify-end grid grid-cols-1">
+                       <h2 className="card-title text-3xl mx-auto text-bold mb-5">Your Stack</h2>
                         {addedTechnology.map((technology: TechTypes, index : number) => {
                           return ( 
                             <div key={index} className="flex justify-between border-2 border-gray-400 p-5">
@@ -80,7 +112,7 @@ export const TechnologiesParent = ({
                                   {technology.category}
                                 </p>
                               </div>
-                              <span className="text-red-500 font-bold flex items-center text-[18px]">
+                              <span className="text-red-500 font-bold flex items-center text-[18px]" onClick={() => handleRemoveTech(technology)}>
                                 <FaTrashAlt />
                               </span>
                             </div>

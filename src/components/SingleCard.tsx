@@ -14,6 +14,7 @@ export const SingleCard = ({ technology, handleAddToStack }: SingleProps) => {
     handleAddToStack(technology);
   };
 
+  
   return (
     <section>
       <div className={`card bg-base-100 shadow-sm h-full
