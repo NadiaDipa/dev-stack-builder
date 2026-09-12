@@ -1,24 +1,27 @@
-import { useState } from "react";
 import type { TechTypes } from "../types/TechTypes";
 
 interface SingleProps {
   technology: TechTypes;
-  handleAddToStack: any
+  handleAddToStack: any;
+  addedTechnology: TechTypes[];
 }
 
-export const SingleCard = ({ technology, handleAddToStack }: SingleProps) => {
-  const [isSelected, setIsSelected] = useState(false);
+export const SingleCard = ({ technology, handleAddToStack, addedTechnology }: SingleProps) => {
+
+  const isAdded = addedTechnology.some(
+    (item) => item.id === technology.id
+  );
+
 
   const handleSelectTech = () => {
-    setIsSelected(true);
     handleAddToStack(technology);
   };
 
-  
+
   return (
     <section>
       <div className={`card bg-base-100 shadow-sm h-full
-        ${isSelected === true  
+        ${isAdded === true  
           ? "border-2 border-[#EC4899]" 
           : "border border-gray-200"
         }
@@ -31,7 +34,7 @@ export const SingleCard = ({ technology, handleAddToStack }: SingleProps) => {
             <span
               className={`border border-current/20 badge rounded-full font-semibold h-6.75 text-[13px] px-3 flex items-center 
               ${
-                isSelected
+                isAdded
                 ? "bg-[#FCE7F3] text-[#DB2777]"
                 : `${technology.badgeBg} ${technology.badgeText}`
               }`}
@@ -69,14 +72,14 @@ export const SingleCard = ({ technology, handleAddToStack }: SingleProps) => {
               onClick={() => handleSelectTech()}
               className={`btn btn-block h-12 py-6 rounded-xl text-[16px]
                 ${
-                  isSelected === true
+                  isAdded === true
                   ? "bg-[#fff9fc] text-[#DB2777]  font-semibold"
                   : "bg-[#0A0F1D] text-white border-2 border-transparent"
                   }
                 `}
-              disabled={isSelected === true ? true : false}
+              disabled={isAdded === true ? true : false}
             >
-              {isSelected === true ? "Added to Stack" : "Add to Stack"}
+              {isAdded === true ? "Added to Stack" : "Add to Stack"}
             </button>
           </div>
         </div>

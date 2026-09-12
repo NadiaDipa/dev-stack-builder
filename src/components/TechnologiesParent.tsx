@@ -72,7 +72,7 @@ export const TechnologiesParent = ({
       <section>
         <div className="flex min-h-fit gap-10">
           <div className=" w-3/4">
-            <TechnologiesAllCard technologies={technologies} handleAddToStack={handleAddToStack}/>
+            <TechnologiesAllCard technologies={technologies} handleAddToStack={handleAddToStack} addedTechnology={addedTechnology}/>
           </div>
 
           <div className="w-1/4 grid grid-cols-1 py-15">

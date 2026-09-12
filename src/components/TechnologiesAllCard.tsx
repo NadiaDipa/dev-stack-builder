@@ -4,11 +4,12 @@ import { SingleCard } from "./SingleCard";
 
 interface TechnologiesProps{
   technologies: TechTypes[];
-  handleAddToStack: any
+  handleAddToStack: any;
+  addedTechnology : TechTypes[];
   
 }
 
-export const TechnologiesAllCard = ({technologies, handleAddToStack }:TechnologiesProps) => {
+export const TechnologiesAllCard = ({technologies, handleAddToStack, addedTechnology }:TechnologiesProps) => {
 
   
 
@@ -16,7 +17,7 @@ export const TechnologiesAllCard = ({technologies, handleAddToStack }:Technologi
     <section className="w-full grid grid-cols-3 items-stretch py-15 gap-10">
       {
         technologies.map((technology:TechTypes, ind: number)=>{
-          return <SingleCard technology={technology} key={ind} handleAddToStack={handleAddToStack}/>
+          return <SingleCard technology={technology} key={ind} handleAddToStack={handleAddToStack} addedTechnology={addedTechnology}/>
           
         })
       }
