@@ -3,10 +3,16 @@ import type { TechTypes } from "../types/TechTypes";
 
 interface SingleProps {
   technology: TechTypes;
+  handleAddToStack: any
 }
 
-export const SingleCard = ({ technology }: SingleProps) => {
+export const SingleCard = ({ technology, handleAddToStack }: SingleProps) => {
   const [isSelected, setIsSelected] = useState(false);
+
+  const handleSelectTech = () => {
+    setIsSelected(true);
+    handleAddToStack(technology);
+  };
 
   return (
     <section>
@@ -59,7 +65,7 @@ export const SingleCard = ({ technology }: SingleProps) => {
 
           <div className="mt-6">
             <button
-              onClick={() => setIsSelected(true)}
+              onClick={() => handleSelectTech()}
               className={`btn btn-block h-12 py-6 rounded-xl text-[16px]
                 ${
                   isSelected === true
