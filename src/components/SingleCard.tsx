@@ -1,3 +1,4 @@
+import { FaCheck } from "react-icons/fa";
 import type { TechTypes } from "../types/TechTypes";
 
 interface SingleProps {
@@ -21,7 +22,7 @@ export const SingleCard = ({ technology, handleAddToStack, addedTechnology }: Si
   return (
     <section>
       <div className={`card bg-base-100 shadow-sm h-full
-        ${isAdded === true  
+        ${isAdded === true  /* disable button color */
           ? "border-2 border-[#EC4899]" 
           : "border border-gray-200"
         }
@@ -68,6 +69,8 @@ export const SingleCard = ({ technology, handleAddToStack, addedTechnology }: Si
           </div>
 
           <div className="mt-6">
+
+            {/* disable button */}
             <button
               onClick={() => handleSelectTech()}
               className={`btn btn-block h-12 py-6 rounded-xl text-[16px]
@@ -79,7 +82,8 @@ export const SingleCard = ({ technology, handleAddToStack, addedTechnology }: Si
                 `}
               disabled={isAdded === true ? true : false}
             >
-              {isAdded === true ? "Added to Stack" : "Add to Stack"}
+              {isAdded === true ?
+              <><FaCheck/> Added to Stack</> : "Add to Stack"}
             </button>
           </div>
         </div>
