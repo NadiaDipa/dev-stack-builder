@@ -73,7 +73,7 @@ export const TechnologiesParent = ({technologyPromise}: TechnologyAllCardProps) 
   };
 
   return (
-    <main className="container mx-auto px-4 max-w-7xl">
+    <main className="mx-auto px-4 max-w-[1600px]">
       {/* Heading */}
       <section>
         <h1 className="font-bold text-2xl xl:text-4xl">
@@ -91,7 +91,7 @@ export const TechnologiesParent = ({technologyPromise}: TechnologyAllCardProps) 
       {/* Technologies and Your Stack */}
       <section>
         <div
-          className="flex flex-col xl:flex-row gap-8 lg:gap-10"
+          className="flex flex-col xl:flex-row items-start gap-8 lg:gap-10"
           id="technologies"
         >
           {/* Technologies Cards */}
@@ -132,7 +132,7 @@ export const TechnologiesParent = ({technologyPromise}: TechnologyAllCardProps) 
                         Your Stack
                       </h2>
 
-                      {/* Count technology */}
+                      {/* Count */}
                       <p className="text-center mb-5">
                         <span className="inline-block px-3 sm:px-4 py-2 rounded-2xl bg-pink-50 text-[#DB2777] text-sm sm:text-[17px] font-semibold">
                           {addedTechnology.length} Technologies Selected

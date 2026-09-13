@@ -3,7 +3,7 @@ import Logo from "../assets/logo-text.png";
 export const Nav = () => {
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-white shadow-sm">
-      <nav className="container mx-auto flex items-center justify-between px-4 py-4 max-w-7xl xl:py-5">
+      <nav className="max-w-[1600px] mx-auto flex items-center justify-between px-4 py-4 max-w-7xl xl:py-5">
 
         <a href="">
           <img src={Logo} alt="Dev Stack" />

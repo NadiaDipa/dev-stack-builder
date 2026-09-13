@@ -4,7 +4,7 @@ import footerLogo from "../assets/logo-text.png";
 export const Footer = () => {
   return (
     <div>
-      <footer className="container mx-auto mt-10 px-6 py-8 text-[#64748B]">
+      <footer className="max-w-[1600px] mx-auto mt-10 px-6 py-8 text-[#64748B]">
         <div className="grid grid-cols-3 gap-6 lg:flex lg:justify-between lg:gap-10 lg:text-left">
           
           {/* Logo & Social */}

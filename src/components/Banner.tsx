@@ -2,7 +2,7 @@ import BannerImg from "../assets/banner-stack.png";
 
 export const Banner = () => {
   return (
-    <section className="container mx-auto flex flex-col gap-10 px-4 pt-24 md:flex-row md:items-center md:justify-between md:pt-20 xl:pt-24  max-w-7xl">
+    <section className="max-w-[1600px] mx-auto flex flex-col gap-10 px-4 pt-24 md:flex-row md:items-center md:justify-between md:pt-20 xl:pt-24  max-w-7xl">
 
       <div className="md:w-1/2">
         <h1 className="text-center text-3xl font-bold text-[#0F172A] md:text-left md:text-4xl lg:text-6xl md:mt-10">
@@ -10,7 +10,7 @@ export const Banner = () => {
             Build Your Ideal
           </span>
           <br />
-          <span className="bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent md:text-4xl lg:text-7xl">
+          <span className="whitespace-nowrap bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent md:text-4xl lg:text-7xl">
             Development Stack
           </span>
         </h1>

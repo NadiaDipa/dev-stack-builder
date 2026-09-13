@@ -22,7 +22,7 @@ export const SingleCard = ({ technology, handleAddToStack, addedTechnology }: Si
   return (
     <section>
       <div className={`card bg-base-100 shadow-sm h-full
-        ${isAdded === true  /* disable button color */
+        ${isAdded === true  /* disable button  */
           ? "border-2 border-[#EC4899]" 
           : "border border-gray-200"
         }
