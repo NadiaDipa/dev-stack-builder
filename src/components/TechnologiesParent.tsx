@@ -75,7 +75,7 @@ export const TechnologiesParent = ({technologyPromise}: TechnologyAllCardProps) 
   return (
     <main className="mx-auto px-4 max-w-[1600px]">
       {/* Heading */}
-      <section className="text-center md:text-left">
+      <section className="text-center md:text-left mt-10 md:mt-16 lg:mt-20 xl:mt-24">
         <h1 className="font-bold text-2xl lg:text-3xl xl:text-4xl">
           Explore the{" "}
           <span className="bg-linear-to-r from-[#EC4899] via-[#D946EF] to-[#8B5CF6] bg-clip-text text-transparent">
@@ -83,7 +83,7 @@ export const TechnologiesParent = ({technologyPromise}: TechnologyAllCardProps) 
           </span>
         </h1>
 
-        <p className="text-[#64748B] py-3 text-base sm:text-lg xl:text-xl">
+        <p className="text-[#64748B] pt-3 pb-6 md:pb-8 text-base sm:text-lg xl:text-xl">
           Pick one technology per category to build your ideal stack.
         </p>
       </section>

@@ -20,7 +20,7 @@ export const SingleCard = ({ technology, handleAddToStack, addedTechnology }: Si
 
 
   return (
-    <section>
+   <section>
       <div className={`card bg-base-100 shadow-sm h-full
         ${isAdded === true  /* disable button  */
           ? "border-2 border-[#EC4899]" 
@@ -44,25 +44,25 @@ export const SingleCard = ({ technology, handleAddToStack, addedTechnology }: Si
             </span>
           </div>
 
-          <div className="">
-            <h2 className="text-2xl font-bold py-5">{technology.name}</h2>
-            <p className="text-[#64748B] text-xl pb-5">
+          <div>
+            <h2 className="text-xl sm:text-2xl font-bold py-4 sm:py-5">{technology.name}</h2>
+            <p className="text-[#64748B] text-base sm:text-lg lg:text-xl pb-4 sm:pb-5">
               {technology.description}
             </p>
           </div>
 
-          <div className="flex justify-between">
-            <span className="badge badge-ls text-[#475569] bg-[#F1F5F9] rounded font-semibold">
+          <div className="flex justify-between items-center flex-wrap gap-2">
+            <span className="badge badge-sm sm:badge-md text-[#475569] bg-[#F1F5F9] rounded font-semibold">
               {technology.category}
             </span>
 
-            <span className="badge badge-ls text-[#64748B] font-semibold">
+            <span className="badge badge-sm sm:badge-md text-[#64748B] font-semibold">
               {technology.difficulty}
             </span>
             <div className="flex items-center gap-2">
               <span className="mask mask-star-2 bg-amber-400 w-4 h-4"></span>
 
-              <span className="font-bold text-[#334155]">
+              <span className="font-bold text-[#334155] text-sm sm:text-base">
                 {technology.rating}
               </span>
             </div>
