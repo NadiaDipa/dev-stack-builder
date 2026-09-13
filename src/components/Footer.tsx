@@ -59,10 +59,9 @@ export const Footer = () => {
             <a className="link link-hover">Terms of Use</a>
             <a className="link link-hover">Privacy Policy</a>
             <a className="link link-hover">Licenses</a>
-          </nav>
 
-          {/* Build Your Stack Button */}
-          <div className="col-span-3 flex justify-center lg:hidden">
+              {/* Build Your Stack Button */}
+          <div className="col-span-3 flex justify-center lg:col-span-1 lg:justify-end lg:items-start mt-8">
             <button
               onClick={() =>
                 document.getElementById("technologies")?.scrollIntoView()
@@ -72,6 +71,9 @@ export const Footer = () => {
               Build Your Stack →
             </button>
           </div>
+          </nav>
+
+        
         </div>
       </footer>
 
