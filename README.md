@@ -35,7 +35,7 @@ A modern and interactive web application where users can explore different techn
 
 
 
-💡React Questions and Answers
+##💡React Questions and Answers
 
 ### 1. What is JSX, and why is it used in React?
 - JSX (JavaScript XML) allows me to write HTML-like elements directly inside JavaScript code.
