@@ -75,8 +75,8 @@ export const TechnologiesParent = ({technologyPromise}: TechnologyAllCardProps) 
   return (
     <main className="mx-auto px-4 max-w-[1600px]">
       {/* Heading */}
-      <section>
-        <h1 className="font-bold text-2xl xl:text-4xl">
+      <section className="text-center md:text-left">
+        <h1 className="font-bold text-2xl lg:text-3xl xl:text-4xl">
           Explore the{" "}
           <span className="bg-linear-to-r from-[#EC4899] via-[#D946EF] to-[#8B5CF6] bg-clip-text text-transparent">
             Technologies

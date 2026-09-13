@@ -3,8 +3,7 @@ import Logo from "../assets/logo-text.png";
 export const Nav = () => {
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-white shadow-sm">
-      <nav className="max-w-[1600px] mx-auto flex items-center justify-between px-4 py-4 max-w-7xl xl:py-5">
-
+      <nav className="max-w-[1600px] mx-auto flex items-center justify-between px-4 py-4 xl:py-5">
         <a href="">
           <img src={Logo} alt="Dev Stack" />
         </a>
@@ -35,17 +34,27 @@ export const Nav = () => {
             <li className="text-[#DB2777]">
               <a href="">Home</a>
             </li>
-            <li><a href="">Technologies</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+            <li>
+              <a href="">Technologies</a>
+            </li>
+            <li>
+              <a href="">Projects</a>
+            </li>
+            <li>
+              <a href="">About</a>
+            </li>
+            <li>
+              <a href="">Contact</a>
+            </li>
 
             <hr />
 
-            <li><a href="">Sign In</a></li>
+            <li>
+              <a href="">Sign In</a>
+            </li>
 
             <li>
-              <a className="rounded-full bg-[#DB2777] text-white w-fit mb-4 lg:mb-0 lg:ml-0 ml-2">
+              <a className="btn btn-sm rounded-full bg-[#DB2777] border-none text-white w-fit mb-4 lg:mb-0 lg:ml-0 ml-2">
                 Sign Up
               </a>
             </li>
@@ -53,26 +62,35 @@ export const Nav = () => {
         </div>
 
         {/* Desktop */}
-        <div className="hidden items-center gap-7 lg:flex">
+
+        <div className="hidden lg:flex items-center justify-center flex-1">
           <ul className="flex items-center gap-7 text-xl font-semibold">
             <li className="text-[#DB2777]">
               <a href="">Home</a>
             </li>
-            <li><a href="">Technologies</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+            <li>
+              <a href="">Technologies</a>
+            </li>
+            <li>
+              <a href="">Projects</a>
+            </li>
+            <li>
+              <a href="">About</a>
+            </li>
+            <li>
+              <a href="">Contact</a>
+            </li>
           </ul>
-
-          <div className="flex items-center gap-7 text-xl">
-            <button>Sign In</button>
-
-            <button className="rounded-full bg-[#DB2777] px-4 py-2 text-white">
-              Sign Up
-            </button>
-          </div>
         </div>
 
+        {/* Desktop */}
+        <div className="hidden lg:flex items-center gap-7 text-xl">
+          <button className="btn btn-ghost text-xl">Sign In</button>
+
+          <button className="btn rounded-full bg-[#DB2777] hover:bg-[#c21f6a] border-none text-white text-xl">
+            Sign Up
+          </button>
+        </div>
       </nav>
     </header>
   );
