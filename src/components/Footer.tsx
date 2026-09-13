@@ -79,7 +79,7 @@ export const Footer = () => {
 
 
       {/* Bottom Footer */}
-      <footer className="container mx-auto flex flex-col items-center gap-4 pb-7 text-center text-sm text-[#94A3B8] sm:flex-row sm:justify-between sm:px-7 sm:text-base">
+      <footer className="max-w-[1600px] mx-auto flex flex-col items-center gap-4 pb-7 text-center text-sm text-[#94A3B8] sm:flex-row sm:justify-between sm:px-7 sm:text-base">
         <p>© {new Date().getFullYear()} - Dev Stack | All rights reserved.</p>
 
         <div className="flex gap-4">
