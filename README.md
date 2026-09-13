@@ -3,6 +3,10 @@
 A modern and interactive web application where users can explore different technologies and build their own personalized tech stack. Users can browse technology cards, select the technologies they want to learn or use, and manage their selected stack through an interactive interface.
 
 
+
+
+
+
 ## 🛠️ Technologies Used
 
 - **React.js** — For building the user interface and components.
@@ -13,6 +17,10 @@ A modern and interactive web application where users can explore different techn
 - **JSON** — For storing technology data.
 - **Vite** — As the build tool and development server.
 - **Netlify** — For deployment.
+
+
+
+
 
 
 
@@ -35,7 +43,10 @@ A modern and interactive web application where users can explore different techn
 
 
 
-##💡React Questions and Answers
+
+
+
+## 💡React Questions and Answers
 
 ### 1. What is JSX, and why is it used in React?
 - JSX (JavaScript XML) allows me to write HTML-like elements directly inside JavaScript code.
